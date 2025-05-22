@@ -22,9 +22,9 @@ export interface Post {
 export const posts: Post[] = [
   {
     id: "1",
-    user: users[0], // Jane Doe
-    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=600&fit=crop",
-    caption: "Beautiful sunset at the mountains! 🏔️ #nature #adventure",
+    user: users[0], // Pavel Svaton
+    imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=600&h=600&fit=crop",
+    caption: "Camping by the lake! Perfect weekend getaway 🏞️ #camping #nature",
     likes: 256,
     isLiked: false,
     timestamp: "2 hours ago",

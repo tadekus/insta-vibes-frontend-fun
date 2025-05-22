@@ -1,4 +1,3 @@
-
 export interface User {
   id: string;
   username: string;
@@ -10,9 +9,9 @@ export interface User {
 export const users: User[] = [
   {
     id: "1",
-    username: "jane_doe",
-    fullName: "Jane Doe",
-    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+    username: "pavel_svaton",
+    fullName: "Pavel Svaton",
+    profileImage: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=400&fit=crop",
     isVerified: true
   },
   {
