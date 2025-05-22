@@ -5,7 +5,7 @@ import Feed from "@/components/Feed";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-blue-50 pb-16">
       <NavBar />
       <Feed />
     </div>
