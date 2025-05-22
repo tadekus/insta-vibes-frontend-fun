@@ -13,6 +13,12 @@ const config: CapacitorConfig = {
     SplashScreen: {
       launchShowDuration: 0
     }
+  },
+  android: {
+    // Android specific configurations
+    allowMixedContent: true,
+    captureInput: true,
+    webViewLogLevel: 'DEBUG'
   }
 };
 
