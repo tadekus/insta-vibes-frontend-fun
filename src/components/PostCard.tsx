@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Post } from "@/data/posts";
 import UserHeader from "./UserHeader";
 import Avatar from "./Avatar";
-import { Heart, MessageCircle, Send, Bookmark } from "lucide-react";
+import { Heart, MessageCircle, Share, Bookmark } from "lucide-react";
 import { cn } from "@/lib/utils";
 import CommentSection from "./CommentSection";
 
@@ -32,7 +32,7 @@ const PostCard = ({ post }: PostCardProps) => {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-md mb-6 max-w-lg mx-auto">
+    <div className="bg-gradient-to-b from-white to-purple-50 border border-purple-100 rounded-xl mb-6 max-w-lg mx-auto shadow-md">
       <UserHeader user={post.user} timestamp={post.timestamp} />
       
       {/* Post Image */}
@@ -40,7 +40,7 @@ const PostCard = ({ post }: PostCardProps) => {
         <img 
           src={post.imageUrl} 
           alt="Post" 
-          className="w-full object-cover" 
+          className="w-full object-cover rounded-md" 
           style={{ maxHeight: "calc(100vh - 300px)" }}
         />
       </div>
@@ -56,7 +56,7 @@ const PostCard = ({ post }: PostCardProps) => {
               <Heart 
                 className={cn(
                   "w-7 h-7 transition-all", 
-                  liked ? "fill-instagram-red text-instagram-red animate-heart-beat" : "text-gray-700"
+                  liked ? "fill-purple-500 text-purple-500 animate-heart-beat" : "text-gray-700"
                 )} 
               />
             </button>
@@ -64,7 +64,7 @@ const PostCard = ({ post }: PostCardProps) => {
               <MessageCircle className="w-7 h-7 text-gray-700" />
             </button>
             <button className="focus:outline-none">
-              <Send className="w-7 h-7 text-gray-700" />
+              <Share className="w-7 h-7 text-gray-700" />
             </button>
           </div>
           <button className="focus:outline-none">
@@ -73,7 +73,7 @@ const PostCard = ({ post }: PostCardProps) => {
         </div>
         
         {/* Likes */}
-        <p className="font-semibold text-sm mb-2">{likesCount} likes</p>
+        <p className="font-semibold text-sm mb-2">{likesCount} appreciations</p>
         
         {/* Caption */}
         <p className="text-sm mb-1">
@@ -92,17 +92,17 @@ const PostCard = ({ post }: PostCardProps) => {
         <form onSubmit={handleComment} className="flex items-center mt-3 pb-4">
           <input
             type="text"
-            placeholder="Add a comment..."
+            placeholder="Share your thoughts..."
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            className="flex-1 outline-none text-sm"
+            className="flex-1 outline-none text-sm bg-transparent border-b border-purple-200 pb-1 focus:border-purple-500 transition-colors"
           />
           {comment.trim() && (
             <button
               type="submit"
-              className="text-instagram-blue font-semibold text-sm ml-2"
+              className="text-purple-600 font-semibold text-sm ml-2"
             >
-              Post
+              Share
             </button>
           )}
         </form>
